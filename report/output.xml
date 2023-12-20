@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20231220 11:54:32.919" rpa="false" schemaversion="4">
+<suite id="s1" name="Registertestcases" source="E:\vcode\futureskill\register\testcases\Registertestcases.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${baseURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231220 11:54:33.036" level="INFO">Opening browser 'chrome' to base url 'https://futureskill.co'.</msg>
+<msg timestamp="20231220 11:54:33.299" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\TSIGNATURE\.cache\selenium\chromedriver\win64\119.0.6045.105\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231220 11:54:33.036" endtime="20231220 11:54:35.098"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to register successfully with future skill" line="14">
+<kw name="When register user to future skill" library="RegisterKeywords">
+<arg>${email}</arg>
+<arg>${firstname}</arg>
+<arg>${lastname}</arg>
+<arg>${phoneNumber}</arg>
+<arg>${password}</arg>
+<kw name="Wait until element is ready then click element" library="CommonKeywords">
+<arg>xpath=//button[contains(text(),'สมัครสมาชิก')]</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:35.100" level="INFO">Clicking element 'xpath=//button[contains(text(),'สมัครสมาชิก')]'.</msg>
+<msg timestamp="20231220 11:54:35.413" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231220 11:54:35.413" level="FAIL">Element with locator 'xpath=//button[contains(text(),'สมัครสมาชิก')]' not found.</msg>
+<status status="FAIL" starttime="20231220 11:54:35.099" endtime="20231220 11:54:35.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:37.415" level="INFO">Clicking element 'xpath=//button[contains(text(),'สมัครสมาชิก')]'.</msg>
+<status status="PASS" starttime="20231220 11:54:37.415" endtime="20231220 11:54:37.885"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:35.099" endtime="20231220 11:54:37.885"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:35.099" endtime="20231220 11:54:37.885"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=email</arg>
+<arg>${email}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:37.886" level="INFO">Typing text 'abc.testexample@example.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20231220 11:54:37.885" endtime="20231220 11:54:38.069"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:37.885" endtime="20231220 11:54:38.069"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:37.885" endtime="20231220 11:54:38.070"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=firstName</arg>
+<arg>${firstname}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.070" level="INFO">Typing text 'Tantawan' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.070" endtime="20231220 11:54:38.118"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.070" endtime="20231220 11:54:38.118"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.070" endtime="20231220 11:54:38.118"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=lastName</arg>
+<arg>${lastname}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.119" level="INFO">Typing text 'Duangdaosongsang' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.119" endtime="20231220 11:54:38.168"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.119" endtime="20231220 11:54:38.168"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.119" endtime="20231220 11:54:38.168"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=phoneNumber</arg>
+<arg>${phoneNumber}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.169" level="INFO">Typing text '0821234567' into text field 'name=phoneNumber'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.168" endtime="20231220 11:54:38.220"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.168" endtime="20231220 11:54:38.220"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.168" endtime="20231220 11:54:38.220"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=newPassword</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.221" level="INFO">Typing text 'Password4234!' into text field 'name=newPassword'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.220" endtime="20231220 11:54:38.297"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.220" endtime="20231220 11:54:38.298"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.220" endtime="20231220 11:54:38.298"/>
+</kw>
+<kw name="Wait until element is ready then input text" library="CommonKeywords">
+<arg>name=confirmPassword</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.298" level="INFO">Typing text 'Password4234!' into text field 'name=confirmPassword'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.298" endtime="20231220 11:54:38.346"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.298" endtime="20231220 11:54:38.346"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.298" endtime="20231220 11:54:38.346"/>
+</kw>
+<kw name="Wait until element is ready then click element" library="CommonKeywords">
+<arg>xpath=//input[@type='checkbox' and @name='consent']</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.347" level="INFO">Clicking element 'xpath=//input[@type='checkbox' and @name='consent']'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.346" endtime="20231220 11:54:38.377"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.346" endtime="20231220 11:54:38.377"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.346" endtime="20231220 11:54:38.377"/>
+</kw>
+<kw name="Wait until element is ready then click element" library="CommonKeywords">
+<arg>xpath=//button[@type="submit" and text()="สมัครสมาชิก"]</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 11:54:38.378" level="INFO">Clicking element 'xpath=//button[@type="submit" and text()="สมัครสมาชิก"]'.</msg>
+<status status="PASS" starttime="20231220 11:54:38.377" endtime="20231220 11:54:38.437"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.377" endtime="20231220 11:54:38.437"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.377" endtime="20231220 11:54:38.437"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:35.099" endtime="20231220 11:54:38.437"/>
+</kw>
+<kw name="Then user register to future skill platfrom with ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์" library="RegisterKeywords" sourcename="user register to future skill platfrom with ${expected_message}">
+<kw name="Wait until Page contains element then verify text" library="CommonKeywords">
+<arg>${expected_message}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${expected_text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231220 11:54:38.711" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231220 11:54:38.711" level="FAIL">Page should have contained text 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์' but did not.</msg>
+<status status="FAIL" starttime="20231220 11:54:38.438" endtime="20231220 11:54:38.712"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231220 11:54:40.719" level="INFO">Current page contains text 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์'.</msg>
+<status status="PASS" starttime="20231220 11:54:40.712" endtime="20231220 11:54:40.719"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.438" endtime="20231220 11:54:40.719"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.438" endtime="20231220 11:54:40.719"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:38.438" endtime="20231220 11:54:40.719"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231220 11:54:40.810" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231220 11:54:40.719" endtime="20231220 11:54:40.810"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:35.098" endtime="20231220 11:54:40.811"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231220 11:54:40.812" endtime="20231220 11:54:42.900"/>
+</kw>
+<status status="PASS" starttime="20231220 11:54:32.920" endtime="20231220 11:54:42.900"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Registertestcases">Registertestcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231220 11:54:33.299" level="WARN">The chromedriver version (119.0.6045.105) detected in PATH at C:\Users\TSIGNATURE\.cache\selenium\chromedriver\win64\119.0.6045.105\chromedriver.exe might not be compatible with the detected chrome version (120.0.6099.110); currently, chromedriver 120.0.6099.109 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
